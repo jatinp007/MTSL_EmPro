@@ -1,0 +1,6 @@
+{
+    "apiUrl": "http://localhost:9133/bsp",
+       "cdpUrl": "http://172.29.57.9:9136/cdp/getdictionary/app",
+       "adminRedirectUrl":"http://20.197.30.236:7077/",
+       "oktaRedirectUri":"http://localhost:4200"
+   }    

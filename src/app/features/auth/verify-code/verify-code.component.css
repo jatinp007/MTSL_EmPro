@@ -1,0 +1,136 @@
+.login-wrapper {
+    background-image: url('../../../../assets/images/bg.jpeg');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-area {
+    padding: 0;
+}
+
+.sidebar {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.login-main-head {
+
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: left;
+    color: #fff
+}
+
+.login-sub-head {
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    color: #fff;
+
+}
+
+.login-frm-wrapper{
+    background: rgb(255 255 255 / 55%);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.login-frm-wrapper input[type="text"], .login-frm-wrapper .form-select {
+    border-radius:0px;
+}
+
+.forget-pwd{
+    justify-content: space-between;
+    align-items:center;
+    margin-top:5px;
+}
+
+.forget-pwd input[type="checkbox"]{
+    margin-top:7px;   
+}
+.rememberme-lbl{
+    font-size:.65rem;
+}
+
+.fgtpwd-lbl{
+font-size:0.75rem;
+text-decoration: underline;
+}
+
+.btn-login{
+    background: #594170;
+    color: #fff;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+.captcha-wrapper{
+    display: flex;
+    align-items: center;
+}
+.capthc{
+    font-size: 0.75rem;
+    padding: 6px;
+    background: red;
+    color: #fff;
+}
+
+.logo-wrapper{
+    display:flex;
+}
+.mp{
+    background-image: url('../../../../assets/images/mp.png');
+    width: 123px;
+    height: 39px;
+    background-size: cover;
+}
+.ms{
+    background-image: url('../../../../assets/images/ms.png');
+    width: 138px;
+    height: 39px;
+    background-size: cover;
+}
+
+.login-head{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align:center;
+
+}
+.login-sub-txt
+{
+    font-size:0.75rem;
+    color: #4d4d4d;
+
+}
+.otp-wrapper{
+  display:flex;
+}
+.otp-wrapper input[type="text"]{
+    width: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.85rem !important;
+    font-weight: 700;
+}
+.resend-code{
+    font-size:0.75rem;
+    color:#4D4D4D;
+    ;
+}

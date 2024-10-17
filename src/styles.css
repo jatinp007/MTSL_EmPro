@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.form-label{
+    font-weight: 400 !important;
+    font-size:0.75rem !important;
+}
+
+input,
+input::placeholder,.form-select {
+    font-size: 0.75rem !important;
+}
+
+
+.save-exit-btn button,.cancel-btn button{
+    border-radius: 24px;
+    background: #fff;
+    color: #594170;
+    border: 1px solid #594170;
+    padding: 10px 45px;
+  }
+
+  .btn-save-cust button{
+    border-radius: 25px;
+    background: #fff;
+    color: #594170;
+    padding: 10px 35px;    
+  }
+  .btn-upload button{
+    background-color:#f3f3f3;
+    border:0px;
+  
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.text-danger{
+    font-size:12px
+}

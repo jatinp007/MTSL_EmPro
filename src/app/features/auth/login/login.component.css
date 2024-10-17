@@ -1,0 +1,134 @@
+.login-wrapper {
+    background-image: url('../../../../assets/images/bg.jpeg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-area {
+    padding: 0;
+}
+
+.sidebar {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.login-main-head {
+
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: left;
+    color: #fff
+}
+
+.login-sub-head {
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    color: #fff;
+
+}
+
+.login-frm-wrapper{
+    background: rgb(255 255 255 / 55%);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.login-frm-wrapper input[type="text"],.login-frm-wrapper input[type="password"], .login-frm-wrapper .form-select {
+    border-radius:0px;
+}
+
+.forget-pwd{
+    justify-content: space-between;
+    align-items:center;
+}
+
+.forget-pwd input[type="checkbox"]{
+    margin-top:7px;   
+}
+.rememberme-lbl{
+    font-size:.65rem;
+}
+
+.fgtpwd-lbl{
+font-size:0.75rem;
+text-decoration: underline;
+}
+
+.btn-login{
+    background: #594170;
+    color: #fff;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+.captcha-wrapper{
+    display: flex;
+    align-items: center;
+}
+.capthc{
+    font-size: 0.75rem;
+    padding: 6px;
+    background: red;
+    color: #fff;
+}
+.login-frm-wrapper span{
+    color:red;
+}
+
+.logo-wrapper{
+    display:flex;
+}
+.mp{
+    background-image: url('../../../../assets/images/mp.png');
+    width: 123px;
+    height: 39px;
+    background-size: cover;
+}
+.ms{
+    background-image: url('../../../../assets/images/ms.png');
+    width: 138px;
+    height: 39px;
+    background-size: cover;
+}
+
+.login-head{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align:center;
+
+}
+.login-sub-txt
+{
+    font-size:0.75rem;
+    color: #9F9F9E;
+
+}
+
+.password-container{
+    position: relative;
+}
+
+.icon-pwd{
+    position: absolute;
+    right: 7px;
+    top: 35px;
+    padding: 2px;
+    cursor: pointer;
+}
