@@ -4,10 +4,10 @@ export enum ApplicationRoutes {
 
     // Main container for purchase order related routes
     PURCHASE_ORDER_CONTAINER = 'purchase-order',
-
+    PURCHASE_ORDER = `${PURCHASE_ORDER_CONTAINER}/list`,
     // Routes for main functionalities
-    PURCHASE_ORDER_LIST = `${PURCHASE_ORDER_CONTAINER}/list`,
-    CREATE_PURCHASE_ORDER = `${PURCHASE_ORDER_CONTAINER}/create`,
+    PURCHASE_ORDER_LIST = `list`,
+    CREATE_PURCHASE_ORDER = `create`,
 
     // Sub-routes for the creation process
     GENERAL_DETAILS = `${CREATE_PURCHASE_ORDER}/general-details`,

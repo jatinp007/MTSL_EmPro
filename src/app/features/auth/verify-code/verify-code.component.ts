@@ -10,7 +10,7 @@ import { ApplicationRoutes } from '../../../shared/enums/routes.enum';
 export class VerifyCodeComponent {
   constructor(private router: Router){}
   submit() {
-    this.router.navigate([ApplicationRoutes.PURCHASE_ORDER_LIST]);
+    this.router.navigate([ApplicationRoutes.PURCHASE_ORDER]);
   }
 
 }

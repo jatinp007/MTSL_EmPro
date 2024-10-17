@@ -12,6 +12,13 @@ import { ConfirmationComponent } from './purchase-order-form/confirmation/confir
 import { SupplierListPopupComponent } from './purchase-order-form/supplier-list-popup/supplier-list-popup.component';
 import { MaterialListPopupComponent } from './purchase-order-form/material-list-popup/material-list-popup.component';
 import { PurchaseOrderComponent } from './purchase-order.component';
+import { ToastModule } from 'primeng/toast';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { PrimeNGModule } from '../../primeng/primeng.module';
+import { HeaderComponent } from '../../layout/header/header.component';
+import { SidebarComponent } from '../../layout/sidebar/sidebar.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -25,11 +32,13 @@ import { PurchaseOrderComponent } from './purchase-order.component';
     SupplierListPopupComponent,
     MaterialListPopupComponent,
     PurchaseOrderFormComponent,
-    PurchaseOrderComponent
+    PurchaseOrderComponent,
   ],
   imports: [
     CommonModule,
-    PurchaseOrderRoutingModule
+    RouterModule,
+    PurchaseOrderRoutingModule,
+    SharedModule
   ]
 })
 export class PurchaseOrderModule { }

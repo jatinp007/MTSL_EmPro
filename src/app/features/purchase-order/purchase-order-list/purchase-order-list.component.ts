@@ -10,6 +10,5 @@ export class PurchaseOrderListComponent {
  *
  */
 constructor() {
-  debugger;
 }
 }

@@ -13,6 +13,7 @@ import { PurchaseOrderComponent } from './purchase-order.component';
 import { PurchaseOrderFormComponent } from './purchase-order-form/purchase-order-form.component';
 
 const routes: Routes = [
+  { path: '', component: PurchaseOrderListComponent }, // Default component to show list
   { path: ApplicationRoutes.PURCHASE_ORDER_LIST, component: PurchaseOrderListComponent },
   {
     path: ApplicationRoutes.CREATE_PURCHASE_ORDER, 
@@ -38,7 +39,6 @@ const routes: Routes = [
       { path: '', redirectTo: 'general-details', pathMatch: 'full' }, // Redirect to general details
     ],
   },
-  { path: '', component: PurchaseOrderListComponent }, // Default component to show list
 ];
 
 @NgModule({

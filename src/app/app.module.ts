@@ -18,6 +18,10 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { AuthenticationService } from './core/services/authentication.service';
 import { ConfigService } from './core/services/config.service';
 import { ApiInterceptor } from './core/interceptor/api.interceptor';
+import { CommonModule } from '@angular/common';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -25,17 +29,15 @@ import { ApiInterceptor } from './core/interceptor/api.interceptor';
   declarations: [
     AppComponent,
     LoginComponent,
-    VerifyCodeComponent
+    VerifyCodeComponent,
   ],
   imports: [
     BrowserModule,
-    PrimeNGModule,
+    RouterModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule,
-    ToastModule,
-    FormsModule,
     ReactiveFormsModule,
+    SharedModule,
     StoreModule.forRoot({ employees: employeeFormReducer }),
     EffectsModule.forRoot([]),
   ],
