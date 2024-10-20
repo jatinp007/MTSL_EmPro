@@ -14,11 +14,13 @@ import { MaterialListPopupComponent } from './purchase-order-form/material-list-
 import { PurchaseOrderComponent } from './purchase-order.component';
 import { ToastModule } from 'primeng/toast';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrimeNGModule } from '../../primeng/primeng.module';
-import { HeaderComponent } from '../../layout/header/header.component';
-import { SidebarComponent } from '../../layout/sidebar/sidebar.component';
+import { FileUploadModule } from 'primeng/fileupload';
 import { SharedModule } from '../../shared/shared.module';
+import { ButtonModule } from 'primeng/button';
+import { BadgeModule } from 'primeng/badge';
+import { ProgressBarModule } from 'primeng/progressbar';
 
 
 @NgModule({
@@ -36,7 +38,15 @@ import { SharedModule } from '../../shared/shared.module';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule,
+    PrimeNGModule,
+    FormsModule,
+    FileUploadModule,
+    ToastModule,
+    ButtonModule,
+    BadgeModule,
+    ProgressBarModule,
     PurchaseOrderRoutingModule,
     SharedModule
   ]

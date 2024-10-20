@@ -1,1 +1,98 @@
-<p>purchase-order-form works!</p>
+<div class="employee-add-container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h1 *ngIf="!isEditMode"
+          class="emp-frm-head">Add Employee</h1>
+      <h1 *ngIf="isEditMode">
+        Modify Details
+        <ng-container *ngIf="id"> - Employee ID: {{ id }}</ng-container>
+      </h1>
+    </div>
+  </div>
+  <div class="card card-custom-frm py-5 px-4">
+    <p-toast></p-toast>
+    <p-steps [model]="steps"
+             [activeIndex]="activeIndex"
+             [readonly]="true">
+      <ng-template pTemplate="item"
+                   let-item
+                   let-i="index">
+        <span class="p-steps-number">{{ i + 1 }}</span>
+        <span class="p-steps-title"
+              [ngClass]="{ completed: i < activeIndex, active: i === activeIndex }">{{ item.label
+          }}</span>
+      </ng-template>
+    </p-steps>
+    <div class="mt-4">
+      <ng-container *ngIf="activeIndex === 0">
+        <app-general-details></app-general-details>
+      </ng-container>
+      <ng-container *ngIf="activeIndex === 1">
+        <app-supplier-payment-details></app-supplier-payment-details>
+      </ng-container>
+      <ng-container *ngIf="activeIndex === 2">
+        <app-material-details></app-material-details>
+      </ng-container>
+      <ng-container *ngIf="activeIndex === 3">
+        <app-taxes-charges-details></app-taxes-charges-details>
+      </ng-container>
+      <ng-container *ngIf="activeIndex === 4">
+        <app-confirmation></app-confirmation>
+      </ng-container>
+      
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <div class="mt-4 d-flex justify-content-between">
+          <div>
+            <p-button class="back-btn"
+                      [style]="{
+                'background-color': 'transparent',
+                'font-size': '14px',
+                'font-weight': '700',
+                color: '#594170',
+                cursor: 'pointer',
+                border: 'none',
+                outline: 'none'
+              }"
+                      severity="secondary"
+                      label="Back"
+                      (onClick)="prevStep()"
+                      [disabled]="activeIndex === 0"></p-button>
+          </div>
+          <div class="d-flex">
+            <div class="cancel-btn">
+              <p-button class="me-3"
+                        label="Cancel"
+                        routerLink="/employee-container/employees"
+                        routerLinkActive="true"></p-button>
+            </div>
+            <div>
+              <!-- Next Step Button -->
+              <ng-container *ngIf="activeIndex < steps.length - 1">
+                <div class="save-exit-btn">
+                  <p-button label="Save & Next"
+                            (onClick)="nextStep()"></p-button>
+                </div>
+              </ng-container>
+            </div>
+            <div class="d-flex">
+              <!-- Save Button for the last step -->
+              <ng-container *ngIf="activeIndex === steps.length - 1">
+                <div class="btn-save-wrapper">
+                  <p-button [style]="{ 'border-radius': '25px'}"
+                            class="btn-save-cust"
+                            label="Save"
+                            (onClick)="saveEmployee()"></p-button>
+                </div>
+                <div class="btn-send-wrapper">
+                  <p-button [style]="{ 'border-radius': '25px' }"
+                            label="Send for Approval"
+                            (onClick)="sendForApproval()"></p-button>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

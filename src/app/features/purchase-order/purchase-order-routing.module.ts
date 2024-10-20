@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: ApplicationRoutes.PURCHASE_ORDER_LIST, component: PurchaseOrderListComponent },
   {
     path: ApplicationRoutes.CREATE_PURCHASE_ORDER, 
-    // component: PurchaseOrderFormComponent,
+    component: PurchaseOrderFormComponent,
     children: [
       { path: 'general-details', component: GeneralDetailsComponent },
       { path: 'supplier-payment-details', component: SupplierPaymentDetailsComponent },
