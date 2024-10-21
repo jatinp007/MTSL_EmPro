@@ -21,6 +21,9 @@ import { SharedModule } from '../../shared/shared.module';
 import { ButtonModule } from 'primeng/button';
 import { BadgeModule } from 'primeng/badge';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -46,6 +49,9 @@ import { ProgressBarModule } from 'primeng/progressbar';
     ToastModule,
     ButtonModule,
     BadgeModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
     ProgressBarModule,
     PurchaseOrderRoutingModule,
     SharedModule

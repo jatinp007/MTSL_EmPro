@@ -30,7 +30,7 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    SharedModule,
+    SharedModule,   
     StoreModule.forRoot({ employees: employeeFormReducer }),
     EffectsModule.forRoot([]),
   ],

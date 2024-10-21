@@ -1,1 +1,199 @@
-<p>supplier-payment-details works!</p>
+<div class="main-wrapper">
+  <form>
+    <div class="row">
+      <div class="col-8">
+        <div class="row mb-3">
+          <h2 class="det-head">Supplier Details</h2>
+          <div class="col-md-4 mb-3">
+            <label for="Soldby" class="form-label custom-label">Sold by<span class="err-msg">*</span></label>
+            <div class="icon-wrap">
+              <input id="Soldby" type="text" class="form-control" />
+              <i class="bi bi-clipboard-data custom-icon" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Shippedby" class="form-label custom-label">Shipped by<span class="err-msg">*</span></label>
+            <div class="icon-wrap">
+              <input id="Shippedby" type="text" class="form-control" />
+              <i class="bi bi-clipboard-data custom-icon"></i>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Remitto" class="form-label custom-label">Remit to<span class="err-msg">*</span></label>
+            <div class="icon-wrap">
+              <input id="Remitto" type="text" class="form-control" />
+              <i class="bi bi-clipboard-data custom-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <h2 class="det-head">Payment Details</h2>
+          <div class="col-md-4 mb-3">
+            <label for="Creditterm" class="form-label custom-label">Credit term<span class="err-msg">*</span></label>
+            <div class="icon-wrap">
+              <input id="Creditterm" type="text" class="form-control" />
+              <i class="bi bi-clipboard-data custom-icon"></i>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Pricebasis" class="form-label custom-label">Price basis (encoterms)
+              <span class="err-msg">*</span></label>
+            <div class="icon-wrap">
+              <input id="Creditterm" type="text" class="form-control" />
+              <i class="bi bi-clipboard-data custom-icon"></i>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Currencyexchangerate" class="form-label custom-label">Currency exchange rate<span
+                class="err-msg">*</span></label>
+            <div class="d-flex align-items-center">
+              <div class="currency-cust-wrap">
+                <span class="rupee-symbol">&#8377;</span>
+                <input id="Currencyexchangerate" type="text" class="form-control" />
+                <i class="bi bi-clipboard-data custom-icon" data-bs-toggle="modal" data-bs-target="#currencyMaster"></i>
+              </div>
+              <label>&#64;</label>
+              <input id="Currencyexchangerate" type="text" class="form-control" />
+            </div>
+
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Closingvalue" class="form-label custom-label">Closing value<span
+                class="err-msg">*</span></label>
+            <input id="Closingvalue" type="text" class="form-control text-end" />
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Costcentre" class="form-label custom-label">Cost centre<span class="err-msg">*</span></label>
+            <div class="icon-wrap">
+              <input id="Costcentre" type="text" class="form-control" />
+              <i class="bi bi-clipboard-data custom-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Modal -->
+  <!-- Sold out -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sold-out-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fs-5 m-0" id="exampleModalLabel">Select Supplier</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="search-control">
+            <input type="text" class="form-control" placeholder="Search"/>
+            <i class="bi bi-search"></i>
+          </div>
+          <table class="table sold-out-tbl">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Party Name</th>
+                <th scope="col">Supplier ID</th>
+                <th scope="col">Grade</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>3M Fasteners India Limited- Haryana </td>
+                <td>SM00003107</td>
+                <td>A</td>
+                <td>4.5</td>
+              </tr>
+              <tr class="selected-row">
+                <td>2</td>
+                <td>Pidilite Adhesive India Ptv Ltd-Pune</td>
+                <td>SM00003107</td>
+                <td>A</td>
+                <td>4.9</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Apex Steel Solutions</td>
+                <td>SM00003107</td>
+                <td>C</td>
+                <td>3.4</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Titan Forge Industries</td>
+                <td>SM00003107</td>
+                <td>B</td>
+                <td>3.9</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Everlast Plastics Inc.</td>
+                <td>SM00003107</td>
+                <td>D</td>
+                <td>2.9</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>VisiTech Glass Solutions</td>
+                <td>SM00003107</td>
+                <td>A</td>
+                <td>4.9</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>ChemTech Automotive Coatings</td>
+                <td>SM00003107</td>
+                <td>B</td>
+                <td>4.3</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex row-count-wrap">
+            <div class="footer-row">Total Supplier: <span>203</span></div>
+          </div>
+          <div class="select-button">
+            <button type="button" class="btn">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sold out -->
+
+  <!--Currency Master-->
+  <div class="modal fade" id="currencyMaster" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog currency-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fs-5 m-0" id="currencyMaster">Add New Currency To Master</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-md-8 mb-3">
+                <label for="Currencyname" class="form-label">Currency name</label>
+                <input type="text" class="form-control" id="Currencyname" placeholder="Currency name">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="Currencysymbol" class="form-label">Currency symbol</label>
+                <input type="text" class="form-control" id="Currencysymbol" placeholder="Currency symbol">
+              </div>
+              <div class="form-check-custom mb-4">
+                <label class="form-label me-2">Status</label>              
+                <input type="checkbox" hidden="hidden" id="married">
+                <label class="switch" for="married"></label>
+              </div>
+              <div class="select-button">
+                <button type="button" class="btn">Add</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Currency Master-->
+</div>

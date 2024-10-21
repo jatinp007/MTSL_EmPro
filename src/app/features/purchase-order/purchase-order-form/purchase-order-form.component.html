@@ -62,15 +62,20 @@
           <div class="d-flex">
             <div class="cancel-btn">
               <p-button class="me-3"
-                        label="Cancel"
+                        label="Clear"
                         routerLink="/employee-container/employees"
+                        routerLinkActive="true"></p-button>
+            </div>
+            <div class="cancel-btn save">
+              <p-button class="me-3"
+                        label="Save"
                         routerLinkActive="true"></p-button>
             </div>
             <div>
               <!-- Next Step Button -->
               <ng-container *ngIf="activeIndex < steps.length - 1">
                 <div class="save-exit-btn">
-                  <p-button label="Save & Next"
+                  <p-button label="Next"
                             (onClick)="nextStep()"></p-button>
                 </div>
               </ng-container>

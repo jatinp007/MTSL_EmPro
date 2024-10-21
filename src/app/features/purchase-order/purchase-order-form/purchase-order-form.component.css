@@ -156,3 +156,8 @@
   .btn-save-wrapper {
     margin: 0 20px
   }
+  ::ng-deep .save-exit-btn button{
+    background-color: #594170;
+    color:#fff;    
+  }
+ 
