@@ -65,9 +65,13 @@ table {
   .sold-out-tbl tr th{
     background: #040404;
     color:#fff;
+    font-size:12px;
 
   }
+  .sold-out-tbl tr td{   
+    font-size:12px;
 
+  }
   .selected-row td{
     background: #3F2C5F;
     color:#fff;
@@ -149,4 +153,7 @@ table {
     font-size: 16px;
 }
 
-  
+.symbol-at{
+    font-size:12px;
+    margin:0 7px;
+    }

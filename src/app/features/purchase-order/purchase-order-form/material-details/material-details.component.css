@@ -3,7 +3,7 @@
 }
 .example-container {
     height: 400px;
-    width: 60%;
+    width: 550px;
     overflow: auto;
     margin:0 auto;
   }
@@ -44,12 +44,143 @@
     color: #3F2C5F;
     font-size:12px;
     font-weight:700;
+    cursor:pointer;
 
+  }
+  .tbl-tab i{
+    font-size: 1rem;
+    font-weight: 700;
   }
 .tab-footer
   {
     box-shadow: 0px -2px 12px 0px #41414133;
     padding:5px;
-    display:flex;
+    display:f;
 
+  }
+
+  .search-control{
+    position: relative;
+  }
+  table {
+    width: 100%;
+  }
+
+  .sold-out-modal{
+    max-width:60%;
+    margin:0 auto;
+  }
+  .sold-out-tbl tr th{
+    background: #040404;
+    color:#fff;
+    font-size:12px;
+
+  }
+  .sold-out-tbl tr td{    
+    font-size:12px;
+  }
+  .selected-row td{
+    background: #3F2C5F;
+    color:#fff;
+  }
+  .search-control input[type="text"]{
+    padding-left:45px;
+  }
+  .search-control i
+  {
+    position: absolute;
+    left: 24px;
+    top: 5px;
+    font-size: 16px;
+}
+.err-msg{
+    color:red;
+    }
+    
+    .employee-add-container{
+        display:none;
+    }
+    
+    .icon-wrap{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .icon-wrap .custom-icon{
+        position: absolute;
+        right: 7px;
+        font-size: 20px;
+        cursor:pointer;
+    }
+    
+    .currency-cust-wrap{
+        position:relative;
+    }
+    
+    .rupee-symbol{
+        position: absolute;
+        left: 6px;
+        top: 5px;
+    }
+    
+    .custom-icon{
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        cursor: pointer;
+    }
+
+    .offcanvas-material{
+        width:50%;
+    }
+    /***********Switch Button***********************/
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    height: 13px;
+    border-radius: 20px;
+    background: #dfd9ea;
+    transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .switch::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 22px;
+    height: 22px;
+    background: #AE9DB4;
+    border-radius: 50%;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+  }
+  input:checked + .switch {
+    background:#CEC6D5;
+    ;
+  }
+  input:checked + .switch::before {
+    left: 14px;
+    background: #594170;
+  }
+  input:checked + .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
+  }
+  .custom-switch-lbl{
+  margin-left:10px;
+  font-size:0.75rem;
+  }
+  
+  /******************************witch button***************************************************/
+
+  .select-button .btn{
+    background: #3F2C5F;
+    color:#fff;
+    border-radius: 20px;
+    padding: 7px 18px;
   }

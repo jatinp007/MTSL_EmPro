@@ -1,5 +1,5 @@
-<h2 class="det-head">Supplier Details</h2>
-<div class="example-container mat-elevation-z8">
+<h2 class="det-head">Material Details</h2>
+<!-- <div class="example-container mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
       <ng-container *ngFor="let colDef of COL_DEFINITIONS">
         <ng-container *ngIf="colDef.sticky" [matColumnDef]="colDef.label" sticky>
@@ -15,4 +15,192 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  </div>
+   
+  </div> -->
+<div class="search-control">
+    <input type="text" class="form-control" placeholder="Search" />
+    <i class="bi bi-search"></i>
+</div>
+<table class="table sold-out-tbl">
+    <thead>
+        <tr>
+            <th scope="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                </div>
+            </th>
+            <th scope="col">#</th>
+            <th scope="col">Material/Services</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">UOM</th>
+            <th scope="col">Price</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Discount Value</th>
+            <th scope="col">Net Price</th>
+            <th scope="col">Total Value</th>
+            <th scope="col">Stock to Date</th>
+            <th scope="col">PR/SO/RFQ</th>
+            <th scope="col">Partial Shipment</th>
+            <th scope="col">Tol.</th>
+            <th scope="col">HSN/SAC code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                </div>
+            </td>
+            <td>1</td>
+            <td>A1AH271481HB0A |CLAMP...</td>
+            <td>2.000</td>
+            <td>NOS</td>
+            <td>₹104.30</td>
+            <td>08.00%</td>
+            <td>₹00.00</td>
+            <td>₹95.99</td>
+            <td>₹1,91,985.60</td>
+            <td>400 NOS</td>
+        </tr>
+    </tbody>
+</table>
+<div class="d-flex tab-footer justify-content-between">
+    <div class="action-buttons d-flex">
+        <div class="tbl-tab me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"><i class="bi bi-plus"></i> Add Material</div>
+        <div class="tbl-tab  me-2"><i class="bi bi-plus"></i> Copy from SO / PO</div>
+        <div class="tbl-tab  me-2"><i class="bi bi-plus"></i> Bulk Upload Material</div>
+    </div>
+    <div class="footer-row"><span>Total Material: 0  | </span><span>Total Material Value:</span> <span><b>₹0.00</b></span></div>
+      
+</div>
+<!--Right Drawer-->
+<div class="offcanvas offcanvas-end offcanvas-material" tabindex="-1" id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Add Material/Services</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row mb-3">
+                        <div class="col-md-4 mb-3">
+                            <label for="Materialservicecode" class="form-label custom-label">Material/service code &
+                                description<span class="err-msg">*</span></label>
+                            <div class="icon-wrap">
+                                <input id="Materialservicecode" type="text" class="form-control" />
+                                <i class="bi bi-clipboard-data custom-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Quantity" class="form-label custom-label">Quantity<span
+                                    class="err-msg">*</span></label>
+                            <div class="icon-wrap">
+                                <input id="Quantity" type="text" class="form-control" />
+                                <i class="bi bi-lightbulb custom-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="UOM" class="form-label custom-label">UOM<span class="err-msg">*</span></label>
+                            <div class="icon-wrap">
+                                <input id="UOM" type="text" class="form-control" />
+                                <i class="bi bi-clipboard-data custom-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Availablestock" class="form-label custom-label">Available stock to date</label>
+                            <input id="Availablestock" type="text" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Price" class="form-label custom-label">Price</label>
+                            <input id="Price" type="text" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="PRSORFQ" class="form-label custom-label">PR/SO/RFQ</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 d-flex mb-3">
+                            <div class="unit-rwap me-2">
+                                <label for="Availablestock" class="form-label custom-label">Discount %</label>
+                                <input id="Availablestock" type="text" class="form-control" />
+                            </div>
+                            <div class="unit-rwap">
+                                <label for="Discountvalue" class="form-label custom-label">Discount value</label>
+                                <input id="Discountvalue" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Netprice" class="form-label custom-label">Net price</label>
+                            <input id="Netprice" type="text" class="form-control text-end" disabled />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Totalvalue" class="form-label custom-label">Total value</label>
+                            <input id="Totalvalue" type="text" class="form-control text-end" disabled />
+                        </div>
+                        <div class="col-md-4 d-flex mb-3">
+                            <div class="unit-rwap me-2">
+                                <div class="form-check-custom mb-4">
+                                    <div class="form-label me-2 text-nowrap">Partial shipment</div>
+                                    <input type="checkbox" hidden="hidden" id="Partialshipment">
+                                    <label class="switch" for="Partialshipment"></label>
+                                </div>
+                            </div>
+                            <div class="unit-rwap">
+                                <label for="Tolerance" class="form-label custom-label">Tolerance %</label>
+                                <input id="Tolerance" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="HSNSACcode" class="form-label custom-label">HSN/SAC code</label>
+                            <input id="HSNSACcode" type="text" class="form-control text-end" disabled />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Costcentre" class="form-label custom-label">Cost centre</label>
+                            <div class="icon-wrap">
+                                <input id="Costcentre" type="text" class="form-control" />
+                                <i class="bi bi-clipboard-data custom-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="HSNSACcode" class="form-label custom-label">Project code</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>PR0009877</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Brandname" class="form-label custom-label">Brand name</label>
+                            <input id="Brandname" type="text" class="form-control text-end" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Toolamortqty" class="form-label custom-label">Tool amort qty.</label>
+                            <input id="Toolamortqty" type="text" class="form-control text-end" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Supplieritemcode" class="form-label custom-label">Supplier item code</label>
+                            <input id="Supplieritemcode" type="text" class="form-control text-end" disabled />
+                        </div>
+                        <div class="col-md-8 mb-3">
+                            <label for="Remarks" class="form-label custom-label">Remarks</label>
+                            <input id="Remarks" type="text" class="form-control text-end" />
+                        </div>
+                    </div>
+                    <div class="select-button">
+                        <button type="button" class="btn">Add</button>
+                      </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--Right Drawer-->
