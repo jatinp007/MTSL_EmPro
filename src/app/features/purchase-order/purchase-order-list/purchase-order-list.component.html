@@ -1,1 +1,160 @@
-<p>purchase-order-list works!</p>
+<div class="employee-list-container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4 class="title-emp">Purchase order listing <i class="fs-6 pi pi-bookmark"></i></h4>
+      <div>
+       
+        <button pButton
+                [style]="{'border-radius':'25px'}"
+                type="button"
+                icon="pi pi-plus"
+                label="Create purchase order"
+                class="p-button-primary"
+                (click)="addPurchaseOrder()"></button>
+      </div>
+    </div>
+  
+    <p-tabView>
+      <p-tabPanel header="Drafts (15)">
+        <div class="filter-container d-flex justify-content-between align-items-center mb-3">
+          <div class="top-frm d-flex">
+            <div class="wrap-field">
+              <label>Category</label>
+              <p-dropdown [style]="{'margin-right': '20px', 'width':'100%'}"
+                          [options]="unitIds"
+                          [(ngModel)]="selectedUnitId"
+                          [ngModelOptions]="{standalone:true}"
+                          placeholder="Unit Id"
+                          class="mr-2 custom-ul"></p-dropdown>
+            </div>
+  
+            <div class="wrap-field">
+              <label>Vendor</label>
+              <p-dropdown [style]="{'margin-right': '20px', 'width':'100%'}"
+                          [options]="employeeTypes"
+                          [(ngModel)]="selectedEmployeeType"
+                          [ngModelOptions]="{standalone:true}"
+                          placeholder="Employee type"
+                          class="mr-2 custom-ul"></p-dropdown>
+            </div>
+  
+            <div class="wrap-field">
+              <label>Raised by</label>
+              <p-dropdown [style]="{'margin-right': '20px', 'width':'100%'}"
+                          [options]="employeeNames"
+                          [(ngModel)]="selectedEmployeeName"
+                          [ngModelOptions]="{standalone:true}"
+                          placeholder="Employee name (Id)"
+                          class="mr-2 custom-ul"></p-dropdown>
+            </div>
+
+            <div class="wrap-field">
+                <label>Order date</label>
+                <p-dropdown [style]="{'margin-right': '20px', 'width':'100%'}"
+                            [options]="employeeNames"
+                            [(ngModel)]="selectedEmployeeName"
+                            [ngModelOptions]="{standalone:true}"
+                            placeholder="Employee name (Id)"
+                            class="mr-2 custom-ul"></p-dropdown>
+              </div>
+    
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="p-input-icon-left mr-2">
+              <i class="pi pi-search"></i>
+              <input type="text"
+                     pInputText
+                     [style]="{'border-radius':'25px'}"
+                     placeholder="Search emp. first name"
+                     (input)="onSearch($event)">
+            </span>
+           
+          </div>
+        </div>
+  
+        <p-table [value]="filteredEmployees"
+                 [paginator]="true"
+                 [rows]="pageSize"
+                 [showCurrentPageReport]="true"
+                 [totalRecords]="totalRecords"
+                 [loading]="loading"
+                 [showFirstLastIcon]="false"
+                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} records"
+                 class="employee-list-tbl"
+                 (onPage)="onPageChange($event)">
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="category">Category<i class="pi pi-sort"></i></th>
+              <th pSortableColumn="orderDate">Order Date <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="poNumber">PO Number <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="totalValue">Total Value <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="vendor">Vendor <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="rating">Rating <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="raisedBy"> Raised by <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="approvedBy">Approved by <i class="pi pi-sort"></i></th>
+              <th pSortableColumn="validity">Validity <i class="pi pi-sort"></i></th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body"
+                       let-employee>
+            <tr>
+              <td>{{employee.category}}</td>
+              <td>{{employee.orderDate}}</td>
+              <td>{{employee.poNumber}}</td>
+              <td>{{employee.totalValue}}</td>
+              <td>{{employee.vendor}}</td>
+              <td>{{employee.rating}}</td>
+              <td>{{employee.raisedBy}}</td>
+              <td>{{employee.approvedBy}}</td>
+              <td>{{employee.validity}}</td>
+              <!-- <td>
+                <button pButton
+                        type="button"
+                        icon="pi pi-ellipsis-v"
+                        (click)="op.toggle($event)"
+                        class="p-button-text"></button>
+                <p-overlayPanel #op>
+                  <div class="p-2">
+                    <div class="mb-2">
+                      <button pButton
+                              type="button"
+                              [style]="{'border-radius':'15px'}"
+                              icon="pi pi-eye me-2"
+                              (click)="viewEmployee(employee.id)"
+                              [text]="true"
+                              severity="info">View</button>
+                    </div>
+                    <div class="mb-2">
+                      <button pButton
+                              type="button"
+                              [style]="{'border-radius':'15px'}"
+                              icon="pi pi-pencil me-2"
+                              (click)="editEmployee(employee.id)"
+                              [text]="true"
+                              severity="warning">Edit</button>
+                    </div>
+                    <div class="mb-2">
+                      <button pButton
+                              type="button"
+                              [style]="{'border-radius':'15px'}"
+                              icon="pi pi-trash me-2"
+                              (click)="deleteEmployee(employee.id)"
+                              [text]="true"
+                              severity="danger">Delete</button>
+                    </div>
+                  </div>
+                </p-overlayPanel>
+              </td> -->
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-tabPanel>
+  
+      <p-tabPanel header="Assigned to me (12)">
+      </p-tabPanel>
+      <p-tabPanel header="Assigned to others (300)">
+      </p-tabPanel>
+    </p-tabView>
+  
+  </div>
+  <!-- pushed to git lab changes -->

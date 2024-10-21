@@ -10,7 +10,8 @@ export enum ApplicationRoutes {
     CREATE_PURCHASE_ORDER = `create`,
 
     // Sub-routes for the creation process
-    GENERAL_DETAILS = `${CREATE_PURCHASE_ORDER}/general-details`,
+    GENERAL_DETAILS = `${PURCHASE_ORDER_CONTAINER}/${CREATE_PURCHASE_ORDER}/general-details`,
+    // GENERAL_DETAILS = `${CREATE_PURCHASE_ORDER}/general-details`,
     SUPPLIER_PAYMENT_DETAILS = `${CREATE_PURCHASE_ORDER}/supplier-payment-details`,
     MATERIAL_DETAILS = `${CREATE_PURCHASE_ORDER}/material-details`,
     TAXES_CHARGES_DETAILS = `${CREATE_PURCHASE_ORDER}/taxes-charges-details`,
