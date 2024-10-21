@@ -79,6 +79,11 @@
     background: #E8E8E8;
     color: #777776;
     font-size: 13px;
+    min-width:200px;
+  }
+
+  .employee-list-tbl tr th .pi-sort{
+    vertical-align:sub;
   }
   
   .employee-list-tbl tr:nth-child(odd) {
@@ -120,4 +125,12 @@
   
   :host ::ng-deep .p-tabview-nav-content li.p-highlight a .p-tabview-title {
     font-weight: 700;
+  }
+
+  .title-emp{
+    font-size:20px;
+  }
+
+  .pi-search-custom{
+    color:#594170;
   }

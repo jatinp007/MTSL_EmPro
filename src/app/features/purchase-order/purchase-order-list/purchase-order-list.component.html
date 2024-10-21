@@ -4,7 +4,7 @@
       <div>
        
         <button pButton
-                [style]="{'border-radius':'25px'}"
+                [style]="{'border-radius':'25px','background-color':'#594170'}"
                 type="button"
                 icon="pi pi-plus"
                 label="Create purchase order"
@@ -60,10 +60,10 @@
           </div>
           <div class="d-flex align-items-center">
             <span class="p-input-icon-left mr-2">
-              <i class="pi pi-search"></i>
+              <i class="pi pi-search pi-search-custom"></i>
               <input type="text"
                      pInputText
-                     [style]="{'border-radius':'25px'}"
+                     [style]="{}"
                      placeholder="Search emp. first name"
                      (input)="onSearch($event)">
             </span>

@@ -1,5 +1,6 @@
 .det-head {
-    font-size: 2rem;
+    font-size:16px;
+    font-weight:700;
 }
 .example-container {
     height: 400px;
@@ -178,9 +179,10 @@
   
   /******************************witch button***************************************************/
 
-  .select-button .btn{
+  .select-button .btn,.btn-send-wrapper .btn{
     background: #3F2C5F;
     color:#fff;
     border-radius: 20px;
     padding: 7px 18px;
   }
+

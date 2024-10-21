@@ -3,7 +3,8 @@
   }
   
   .employee-add-container h1 {
-    font-size: 1.6rem;
+    font-size:20px;
+    margin:0;
   }
   
   ::ng-deep .p-steps .p-steps-item {
@@ -144,7 +145,6 @@
   
   .emp-frm-head {
     color: #1A1919;
-    margin-top: 1.2rem;
   
   }
   
@@ -156,7 +156,7 @@
   .btn-save-wrapper {
     margin: 0 20px
   }
-  ::ng-deep .save-exit-btn button{
+  ::ng-deep .save-exit-btn button,::ng-deep .btn-send-wrapper button{
     background-color: #594170;
     color:#fff;    
   }
