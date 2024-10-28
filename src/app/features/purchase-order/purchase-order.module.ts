@@ -22,6 +22,7 @@ import { ButtonModule } from 'primeng/button';
 import { BadgeModule } from 'primeng/badge';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { MatTableModule } from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
@@ -50,6 +51,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ButtonModule,
     BadgeModule,
     MatTableModule,
+    MatIconModule,
     MatSortModule,
     MatPaginatorModule,
     ProgressBarModule,
