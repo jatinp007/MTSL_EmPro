@@ -477,3 +477,38 @@ input:checked+.switch:active::before {
   white-space: nowrap;
   font-weight: 400;
 }
+
+.det-head {
+  font-size:16px;
+  font-weight:700;
+}
+.example-container {
+    height: 300px;
+    width: 100%;
+    overflow: auto;
+    margin:0 auto;
+  }
+  .mat-mdc-header-row{
+    background-color: #000;
+    color:#fff
+  }
+  table {
+    width: 800px;
+  }
+  
+  td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+  }
+  
+  .mat-table-sticky:last-child {
+    border-left: 1px solid #e0e0e0;
+  }
+
+  .mat-mdc-table .mat-mdc-row:nth-child(even){
+    background-color:#F4EFF4;
+  }
+
+  .parentEmpInfo-tbl{
+    grid-template-columns:100%;
+  }

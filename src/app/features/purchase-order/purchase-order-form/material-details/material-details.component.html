@@ -19,9 +19,14 @@
   </div> -->
 
 <!-- material table starts here  -->
-
+<div class="search-control">
+    <input type="text"
+           class="form-control"
+           placeholder="Search" />
+    <i class="bi bi-search"></i>
+</div>
 <section class="example-container mat-elevation-z8"
-         tabindex="0">
+         tabindex="0">       
     <table mat-table
            [dataSource]="dataSource">
 
@@ -184,19 +189,24 @@
             *matHeaderRowDef="displayedColumns; sticky: true"></tr>
         <tr mat-row
             *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+    </table>   
 </section>
-
+<div class="d-flex tab-footer justify-content-between">
+    <div class="action-buttons d-flex">
+        <div class="tbl-tab me-2"
+             data-bs-toggle="offcanvas"
+             data-bs-target="#offcanvasRight"
+             aria-controls="offcanvasRight"><i class="bi bi-plus"></i> Add Material</div>
+        <div class="tbl-tab  me-2"><i class="bi bi-plus"></i> Copy from SO / PO</div>
+        <div class="tbl-tab  me-2"><i class="bi bi-plus"></i> Bulk Upload Material</div>
+    </div>
+    <div class="footer-row"><span>Total Material: 0 | </span><span>Total Material Value:</span> <span><b>₹0.00</b></span></div>
+</div>
 
 <!-- material table ends here -->
 
-<div class="search-control">
-    <input type="text"
-           class="form-control"
-           placeholder="Search" />
-    <i class="bi bi-search"></i>
-</div>
-<table class="table sold-out-tbl">
+
+<!-- <table class="table sold-out-tbl">
     <thead>
         <tr>
             <th scope="col">
@@ -245,19 +255,8 @@
             <td>400 NOS</td>
         </tr>
     </tbody>
-</table>
-<div class="d-flex tab-footer justify-content-between">
-    <div class="action-buttons d-flex">
-        <div class="tbl-tab me-2"
-             data-bs-toggle="offcanvas"
-             data-bs-target="#offcanvasRight"
-             aria-controls="offcanvasRight"><i class="bi bi-plus"></i> Add Material</div>
-        <div class="tbl-tab  me-2"><i class="bi bi-plus"></i> Copy from SO / PO</div>
-        <div class="tbl-tab  me-2"><i class="bi bi-plus"></i> Bulk Upload Material</div>
-    </div>
-    <div class="footer-row"><span>Total Material: 0 | </span><span>Total Material Value:</span> <span><b>₹0.00</b></span></div>
+</table> -->
 
-</div>
 <!--Right Drawer-->
 <div class="offcanvas offcanvas-end offcanvas-material"
      tabindex="-1"

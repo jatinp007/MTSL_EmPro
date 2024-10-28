@@ -14,11 +14,20 @@
         margin: 0;
     }
     
-    * {
+    ::ng-deep  * {
         font-family: Arial, Helvetica, sans-serif;
     }
 }
+::ng-deep body{
+  font-family: Arial, Helvetica, sans-serif !important;
+}
 
+::ng-deep  .mat-display-large,::ng-deep .mat-typography .mat-display-large,::ng-deep .mat-typography h1 {
+  font: 400 3.562rem / 4rem Arial,sans-serif;  
+}
+.mat-typography {
+  font-family: Arial, sans-serif !important;
+}
 .form-label{
     font-weight: 400 !important;
     font-size:0.75rem !important;
@@ -50,7 +59,7 @@ input::placeholder,.form-select {
   
   }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 .text-danger{
     font-size:12px
 }
